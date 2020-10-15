@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING
   }, {});
   MeasurementUnit.associate = function(models) {
-    
+    MeasurementUnit.hasMany(models.Ingredient, { foreignKey: 'measurementUnitId'})
   };
   return MeasurementUnit;
 };

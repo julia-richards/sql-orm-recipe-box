@@ -8,6 +8,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Ingredient.associate = function(models) {
     // associations can be defined here
+    Ingredient.belongsTo(models.Recipe, { foreignKey: 'recipeId'});
+    Ingredient.belongsTo(models.MeasurementUnit, { foreignKey: 'measurementUnitId'});
   };
   return Ingredient;
 };
