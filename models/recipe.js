@@ -14,8 +14,8 @@ module.exports = (sequelize, DataTypes) => {
 	);
 	Recipe.associate = function (models) {
 		// associations can be defined here
-		Recipe.hasMany(models.Instruction, { foreignKey: "recipeId" });
-		Recipe.hasMany(models.Ingredient, { foreignKey: "recipeId" });
+		Recipe.hasMany(models.Instruction, { foreignKey: "recipeId" }, { onDelete: 'CASCADE', hooks: true });
+		Recipe.hasMany(models.Ingredient, { foreignKey: "recipeId" }, { onDelete: 'CASCADE', hooks: true });
 	};
 	return Recipe;
 };
