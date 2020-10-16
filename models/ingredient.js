@@ -5,15 +5,13 @@ module.exports = (sequelize, DataTypes) => {
 		{
 			amount: {
 				type: DataTypes.NUMERIC,
-				validate: {
-					allowNull: false,
-				},
+				allowNull: false,
+
 			},
 			measurementUnitId: {
-				type: DataTypes.INTEGER,
-				validate: {
-					allowNull: false,
-				},
+        type: DataTypes.INTEGER,
+        allowNull: false,
+
 			},
 			foodStuff: {
 				type: DataTypes.STRING,
@@ -22,10 +20,9 @@ module.exports = (sequelize, DataTypes) => {
 				},
 			},
 			recipeId: {
-				type: DataTypes.INTEGER,
-				validate: {
-					allowNull: false,
-				},
+        type: DataTypes.INTEGER,
+        allowNull: false,
+
 			},
 		},
 		{}
