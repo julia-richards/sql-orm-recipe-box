@@ -39,7 +39,7 @@ async function createNewInstruction(specification, recipeId) {
 
 	const maxList = await Instruction.create({
 		specification: specification,
-		listOrder: instructions.length,
+		listOrder: instructions.length + 1,
 		recipeId: recipeId,
 	});
 	return maxList;
